@@ -1,0 +1,24 @@
+# 公開リポジトリ。内部ドキュメント・第三者参照画像・作業ファイルは一切コミットしない。
+# ホワイトリスト方式: まず全て無視し、公開に必要なものだけを明示的に許可する。
+
+/*
+
+!.gitignore
+!.nojekyll
+!CNAME
+!index.html
+!assets/
+!privacy/
+!terms/
+!support/
+
+# assets 配下は本番アセットのみ
+assets/*
+!assets/legal.css
+!assets/app-icon.png
+!assets/shots/
+assets/shots/*
+!assets/shots/sim-*.png
+
+# OS
+.DS_Store
