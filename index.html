@@ -108,9 +108,11 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 18px auto 23px; max-width: 898px;
 }
 .hero-devices { display: flex; justify-content: center; }
-.hero-devices-inner { display: flex; gap: 43px; margin-top: 80px; flex: none; }
+.hero-devices-inner { display: flex; align-items: flex-start; gap: 43px; margin-top: 80px; flex: none; }
 .hero-devices .device { width: 280px; flex: none; }
-.hero-devices .device:nth-child(odd) { margin-top: 60px; }
+/* 段違い配置は transform で。margin-top だと flex 行の高さが伸び、
+   align-items:stretch と相まって他の端末が縦に引き伸ばされるため。 */
+.hero-devices .device:nth-child(odd) { transform: translateY(60px); }
 
 /* ---------- 端末 ----------
    apple.com/jp/apple-books/ のヒーロー端末を1pxずつ横断して実測した断面:
@@ -313,7 +315,7 @@ footer p { margin: 0 0 6px; }
   .hero-devices-inner { gap: 20px; margin-top: 48px; }
   .hero-devices .device { width: 176px; padding: 8px; border-radius: 28px; }
   .hero-devices .device img { border-radius: 20px; }
-  .hero-devices .device:nth-child(odd) { margin-top: 36px; }
+  .hero-devices .device:nth-child(odd) { transform: translateY(36px); }
   .device.lg { width: 232px; padding: 10px; border-radius: 36px; }
   .device.lg img { border-radius: 26px; }
   .device.md { width: 208px; padding: 9px; border-radius: 33px; }
