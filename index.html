@@ -238,6 +238,10 @@ img { max-width: 100%; height: auto; display: block; }
 .device-item { text-align: center; }
 .device-item p { font-size: 24px; font-weight: 600; line-height: 1.25; letter-spacing: 0.216px; margin: 24px 0 0; }
 
+/* ============ 4.5 CONCEPT ============ 行学の循環を語る文章ブロック(白地・中央) */
+.section-concept { padding: 40px 0 150px; }
+.section-concept .intro { max-width: 620px; }
+
 /* ============ 5. FAQ ============ 実測: padding 150/100, bg #f5f5f7, Q 24px 600, A 17px 400 25px */
 .section-faq { padding: 150px 0 100px; background: var(--bg-alt); }
 .accordion { max-width: 820px; margin: 56px auto 0; }
@@ -432,6 +436,15 @@ footer p { margin: 0 0 6px; }
   </div>
 </section>
 
+<!-- ============ 4.5 CONCEPT ============ -->
+<section class="section-concept">
+  <div class="wrap">
+    <h2 class="headline">行と学を、<br><span class="nowrap">ひとつに。</span></h2>
+    <p class="intro">日蓮仏教の実践は、信・行・学。このアプリは「行（勤行・唱題）」と「学（御書）」を、同じ場所にまとめました。</p>
+    <p class="intro" style="margin-top:16px;">いつもの勤行に、通解と読み方を。そこから御書へ。読んで、また戻って、唱えて。日々の実践が、ひとつづきになる場所を目指しました。</p>
+  </div>
+</section>
+
 <!-- ============ 5. FAQ ============ -->
 <section class="section-faq">
   <div class="wrap">
@@ -486,9 +499,10 @@ footer p { margin: 0 0 6px; }
       <a href="/terms/">利用規約</a>
       <a href="/support/">サポート</a>
     </div>
-    <p>運営: Mitsuaki Ishida（個人）</p>
-    <p>THE GOSHO は個人が制作したアプリです。特定の団体が運営・監修するものではありません。</p>
+    <p>THE GOSHO は、ひとりの利用者が「教学を、もっと身近にしたい」と思って作った個人開発のアプリです。特定の団体が運営・監修するものではありません。</p>
     <p>御書の本文はウェブ御書、用語解説は教学用語検索、英訳は The Writings of Nichiren Daishonin を参照しています。現代語訳はそれらをもとに組み立てた参考訳です。</p>
+    <p>運営: Mitsuaki Ishida（個人）</p>
+    <p>© 2026 Mitsuaki Ishida. All rights reserved.</p>
   </div>
 </footer>
 
@@ -510,6 +524,7 @@ document.querySelectorAll('.marquee-track').forEach((track, i) => {
     '.section-library .headline', '.section-library .intro', '.marquees',
     '.section-tiles .headline', '.section-tiles .intro', '.tile',
     '.section-devices .headline', '.section-devices .intro', '.devices-image',
+    '.section-concept .headline', '.section-concept .intro',
     '.section-router .headline', '.section-router .intro', '.section-router .btn-row'
   ].join(', ');
   const els = document.querySelectorAll(sel);
