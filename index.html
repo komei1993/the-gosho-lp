@@ -66,6 +66,14 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 8px 11px; border-radius: 980px;
   background: var(--accent); color: #fff; text-decoration: none;
 }
+/* ローカルナビのアンカーリンク(Apple の ac-ln 相当)。中央に配置。 */
+.nav-links { display: flex; gap: 28px; margin: 0 auto 0 32px; }
+.nav-links a { font-size: 14px; font-weight: 400; line-height: 1; color: var(--text); text-decoration: none; }
+.nav-links a:hover { color: var(--accent); }
+/* アンカー先が sticky ナビに隠れないようオフセット */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 64px; }
+@media (max-width: 734px) { .nav-links { display: none; } }
 
 /* ---------- 共通タイポ（実測値） ---------- */
 .headline {                      /* .hero-headline / .section-headline = 72px 700 76px */
@@ -347,6 +355,11 @@ footer p { margin: 0 0 6px; }
 <nav class="nav">
   <div class="nav-inner">
     <span class="nav-title">THE GOSHO</span>
+    <div class="nav-links">
+      <a href="#features">特長</a>
+      <a href="#concept">コンセプト</a>
+      <a href="#faq">Q&amp;A</a>
+    </div>
     <a class="nav-cta" href="#">近日公開</a>
   </div>
 </nav>
@@ -383,7 +396,7 @@ footer p { margin: 0 0 6px; }
 </section>
 
 <!-- ============ 3. TILES ============ -->
-<section class="section-tiles">
+<section class="section-tiles" id="features">
   <div class="wrap">
     <h2 class="headline">教学を、<br><span class="nowrap">もっと身近に。</span></h2>
     <p class="intro">英訳御書の意訳と用語集をもとにAIで現代語訳。<span class="nowrap">本文を読みながらわからない用語はタップで閲覧。</span></p>
@@ -437,7 +450,7 @@ footer p { margin: 0 0 6px; }
 </section>
 
 <!-- ============ 4.5 CONCEPT ============ -->
-<section class="section-concept">
+<section class="section-concept" id="concept">
   <div class="wrap">
     <h2 class="headline">行と学を、<br><span class="nowrap">ひとつに。</span></h2>
     <p class="intro">日蓮仏教の実践は、信・行・学。このアプリは「行（勤行・唱題）」と「学（御書）」を、同じ場所にまとめました。</p>
@@ -446,7 +459,7 @@ footer p { margin: 0 0 6px; }
 </section>
 
 <!-- ============ 5. FAQ ============ -->
-<section class="section-faq">
+<section class="section-faq" id="faq">
   <div class="wrap">
     <h2 class="headline">よくある質問。</h2>
     <div class="accordion">
