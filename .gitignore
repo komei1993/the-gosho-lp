@@ -11,12 +11,15 @@
 !privacy/
 !terms/
 !support/
+!g/
+!.well-known/
 
 # assets 配下は本番アセットのみ
 assets/*
 !assets/legal.css
 !assets/app-icon.png
 !assets/hero-devices.png
+!assets/og-share.png
 !assets/shots/
 assets/shots/*
 !assets/shots/sim-*.png
