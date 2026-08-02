@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["YKT3F7FR6G.com.toicake.thegosho"],
+        "paths": ["/g/*"],
+        "components": [{ "/": "/g/*" }]
+      }
+    ]
+  }
+}
