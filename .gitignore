@@ -20,6 +20,7 @@ assets/*
 !assets/app-icon.png
 !assets/hero-devices.png
 !assets/og-share.png
+!assets/app-store-badge-ja.svg
 !assets/shots/
 assets/shots/*
 !assets/shots/sim-*.png

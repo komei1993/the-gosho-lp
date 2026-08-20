@@ -64,8 +64,9 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-cta {
   font-size: 12px; font-weight: 400; line-height: 1;
   padding: 8px 11px; border-radius: 980px;
-  background: var(--accent); color: #fff; text-decoration: none;
+  background: #000; color: #fff; text-decoration: none;
 }
+.nav-cta:hover { background: #333; }
 /* ローカルナビのアンカーリンク(Apple の ac-ln 相当)。中央に配置。 */
 .nav-links { display: flex; gap: 28px; margin: 0 auto 0 32px; }
 .nav-links a { font-size: 14px; font-weight: 400; line-height: 1; color: var(--text); text-decoration: none; }
@@ -98,6 +99,10 @@ section[id] { scroll-margin-top: 64px; }
 }
 .btn:hover { background: var(--accent-dark); }
 .btn-row { text-align: center; }
+/* Apple 公式バッジ(黒)。ガイドライン: 最小高さ40px・周囲に余白。h56 で既存 CTA と同じ高さに */
+.store-badge { display: inline-block; }
+.store-badge img { display: block; height: 56px; width: auto; }
+.store-badge:hover { opacity: 0.85; }
 
 /* ---------- スクロール連動フェードイン(Apple 風) ----------
    JS 有効時のみ隠し、ビューポート進入で .in を付与して表示。JS 無効/低モーション設定では常時表示。 */
@@ -373,7 +378,7 @@ footer p { margin: 0 0 6px; }
     </div>
     <h2 class="headline hero-headline">わかる、<span class="nowrap">かわる。</span></h2>
     <p class="hero-copy">御書に、現代語訳と用語解説を。<br>毎日の勤行と唱題も、<span class="nowrap">ひとつのアプリに。</span></p>
-    <div class="btn-row"><a class="btn" href="https://apps.apple.com/jp/app/the-gosho/id6789567009">App Store でダウンロード</a></div>
+    <div class="btn-row"><a class="store-badge" href="https://apps.apple.com/jp/app/the-gosho/id6789567009"><img src="assets/app-store-badge-ja.svg" alt="App Store でダウンロード" width="152" height="56"></a></div>
   </div>
   <div class="hero-devices">
     <img class="hero-image" src="assets/hero-devices.png"
@@ -499,7 +504,7 @@ footer p { margin: 0 0 6px; }
 <section class="section-router">
   <div class="wrap">
     <h2 class="router-headline">今日から、<br><span class="nowrap">御書をポケットに。</span></h2>
-    <div class="btn-row" style="margin-top:40px;"><a class="btn" href="https://apps.apple.com/jp/app/the-gosho/id6789567009">App Store でダウンロード</a></div>
+    <div class="btn-row" style="margin-top:40px;"><a class="store-badge" href="https://apps.apple.com/jp/app/the-gosho/id6789567009"><img src="assets/app-store-badge-ja.svg" alt="App Store でダウンロード" width="152" height="56"></a></div>
     <p class="router-note">iPhone 対応。App Store で配信中です。</p>
   </div>
 </section>
