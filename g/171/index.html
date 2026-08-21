@@ -38,7 +38,9 @@ h1 { font-size: 28px; font-weight: 700; line-height: 1.35; margin: 0 0 10px; }
   padding: 16px 20px; font-size: 17px; font-weight: 600; margin-bottom: 12px; }
 .cta-app { background: var(--accent); color: #fff; }
 .cta-app:active { background: var(--accent-dark); }
-.cta-store { background: #fff; color: var(--accent); border: 1px solid rgba(122,111,89,0.25); }
+/* App Store は Apple 公式バッジ(黒)。最小高さ40pxのガイドラインを満たす */
+.store-badge { display: block; text-align: center; margin-bottom: 12px; }
+.store-badge img { height: 52px; width: auto; display: inline-block; }
 .note { font-size: 13px; color: var(--text-sub); text-align: center; margin: 20px 0 0; }
 .note a { color: var(--taupe); }
 footer { padding: 20px 24px 32px; text-align: center; font-size: 12px; color: var(--text-sub); }
@@ -52,20 +54,23 @@ footer a { color: inherit; margin: 0 8px; }
   <h1>兄弟抄</h1>
   <p class="meta">池上宗仲・池上宗長宛・建治2年(’76)4月・新版 p.1468–1481</p>
   <a class="cta cta-app" id="open-app" href="thegosho:///gosho/171">アプリで開く</a>
-  <a class="cta cta-store" href="https://apps.apple.com/jp/app/the-gosho/id6789567009">App Store でダウンロード</a>
+  <a class="store-badge" href="https://apps.apple.com/jp/app/the-gosho/id6789567009"><img src="/assets/app-store-badge-ja.svg" alt="App Store でダウンロード" width="142" height="52"></a>
   <p class="note">本文・現代語訳・用語解説はアプリでご覧いただけます。<br>原文は<a href="https://goshoshinpan-search.sokanet.jp/name?gosyo_id=171">創価学会 御書新版検索</a>でも読めます。</p>
 </main>
 <footer>
   <a href="/">THE GOSHO</a><a href="/privacy/">プライバシー</a><a href="/terms/">利用規約</a><a href="/support/">サポート</a>
 </footer>
 <script>
-// シェア URL の ?page= をアプリのディープリンクへ引き継ぐ。
+// シェア URL の ?page= / ?s= / ?e= (該当箇所ハイライト用オフセット) をアプリのディープリンクへ引き継ぐ。
 (function () {
-  var page = new URLSearchParams(location.search).get('page');
-  var el = document.getElementById('open-app');
-  var url = 'thegosho:///gosho/171';
-  if (page && /^\d+$/.test(page)) url += '?page=' + page;
-  el.setAttribute('href', url);
+  var sp = new URLSearchParams(location.search);
+  var qs = [];
+  ['page', 's', 'e'].forEach(function (k) {
+    var v = sp.get(k);
+    if (v && /^\d+$/.test(v)) qs.push(k + '=' + v);
+  });
+  var url = 'thegosho:///gosho/171' + (qs.length ? '?' + qs.join('&') : '');
+  document.getElementById('open-app').setAttribute('href', url);
 })();
 </script>
 </body>
