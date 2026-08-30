@@ -11,6 +11,7 @@
 !privacy/
 !terms/
 !support/
+!guide/
 !g/
 !.well-known/
 
@@ -24,6 +25,8 @@ assets/*
 !assets/shots/
 assets/shots/*
 !assets/shots/sim-*.png
+# 手順ガイドのスクショ(4:3 白フレーム)
+!assets/guide/
 
 # OS
 .DS_Store
