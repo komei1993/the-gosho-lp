@@ -99,3 +99,39 @@ footer p { margin: 12px 0 0; }
   h1 { font-size: 28px; }
   h2 { font-size: 20px; }
 }
+
+/* ---------- 手順ガイド (guide/) ---------- */
+/* 番号付きの手順。画像は 4:3 の白フレームに収めてあるので、そのまま横幅いっぱいに置く。 */
+.step { margin: 0 0 56px; }
+.step-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 999px;
+  background: var(--accent); color: #fff;
+  font-size: 15px; font-weight: 600; line-height: 1;
+  margin-right: 10px; vertical-align: 2px;
+}
+.step h2 { display: flex; align-items: center; margin-top: 0; }
+.step figure { margin: 20px 0 0; }
+.step img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--line); border-radius: 12px;
+  background: #fff;
+}
+.step figcaption {
+  margin-top: 10px; font-size: 14px; line-height: 1.6; color: var(--text-sub);
+}
+
+/* 注意書き。全文を読ませたい短い塊に使う */
+.note {
+  border: 1px solid var(--line); border-radius: 12px;
+  background: var(--bg-alt);
+  padding: 16px 18px; margin: 0 0 32px;
+  font-size: 15px; line-height: 1.7;
+}
+/* 見出し行だけ block。本文中の強調は inline のままにする */
+.note > strong:first-child { display: block; margin-bottom: 4px; }
+.note p:last-child { margin-bottom: 0; }
+
+@media (max-width: 600px) {
+  .step { margin-bottom: 40px; }
+}
