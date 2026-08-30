@@ -112,7 +112,7 @@ footer p { margin: 12px 0 0; }
 }
 .step h2 { display: flex; align-items: center; margin-top: 0; }
 .step figure { margin: 20px 0 0; }
-.step img {
+main figure img {
   display: block; width: 100%; height: auto;
   border: 1px solid var(--line); border-radius: 12px;
   background: #fff;
@@ -134,4 +134,16 @@ footer p { margin: 12px 0 0; }
 
 @media (max-width: 600px) {
   .step { margin-bottom: 40px; }
+}
+
+/* ガイド目次 */
+.guide-list { list-style: none; padding: 0; margin: 0; }
+.guide-list li { border-bottom: 1px solid var(--line); }
+.guide-list a {
+  display: block; padding: 18px 0 2px;
+  font-size: 19px; font-weight: 600; text-decoration: none;
+}
+.guide-list span {
+  display: block; padding-bottom: 18px;
+  font-size: 14px; color: var(--text-sub);
 }

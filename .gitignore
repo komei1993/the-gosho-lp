@@ -12,6 +12,13 @@
 !terms/
 !support/
 !guide/
+# ガイドの生成スクリプトとデータ(node scripts/build-guides.mjs で再生成できる)
+!scripts/
+scripts/*
+!scripts/build-guides.mjs
+!data/
+data/*
+!data/guides/
 !g/
 !.well-known/
 
