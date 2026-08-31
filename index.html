@@ -30,6 +30,7 @@
 
 html { -webkit-text-size-adjust: 100%; }
 
+html, body { overflow-x: clip; }
 body {
   margin: 0;
   overflow-x: hidden;          /* ヒーローの端末列が画面幅を超えるため */
@@ -353,6 +354,10 @@ footer p { margin: 0 0 6px; }
      hero-copy は短いので nowrap を保つ */
   .intro .nowrap { white-space: normal; }
 }
+@media (max-width: 374px) {
+  /* SE 幅では 40px だと「訳をつけました。」(8字) が収まらない */
+  .headline { font-size: 34px; }
+}
 </style>
 </head>
 <body>
@@ -362,6 +367,7 @@ footer p { margin: 0 0 6px; }
     <span class="nav-title">THE GOSHO</span>
     <div class="nav-links">
       <a href="#features">特長</a>
+      <a href="/guide/">使い方</a>
       <a href="#concept">コンセプト</a>
       <a href="#faq">Q&amp;A</a>
     </div>
@@ -446,7 +452,7 @@ footer p { margin: 0 0 6px; }
 <!-- ============ 4. DEVICES ============ -->
 <section class="section-devices">
   <div class="wrap">
-    <h2 class="headline">唱題もご祈念も、<br><span class="nowrap">ワンタップで記録しよう。</span></h2>
+    <h2 class="headline">唱題もご祈念も、<br>ワンタップで<span class="nowrap">記録しよう。</span></h2>
     <p class="intro">フリー計測とタイマー機能付き。<span class="nowrap">ウィジェットで今日の御文も表示できる。</span></p>
     <img class="devices-image" src="assets/shots/sim-07-chanting.png"
          alt="唱題の計測画面と、ホーム画面のウィジェット。今日の分数と達成リング、日次・総合ゴールの進捗"
@@ -513,6 +519,7 @@ footer p { margin: 0 0 6px; }
   <div class="wrap">
     <hr class="foot-rule">
     <div class="foot-links">
+      <a href="/guide/">使い方</a>
       <a href="/privacy/">プライバシーポリシー</a>
       <a href="/terms/">利用規約</a>
       <a href="/support/">サポート</a>
